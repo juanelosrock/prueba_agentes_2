@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AgentsController@index' );
+Route::resource('agents','AgentsController');
+Route::resource('contacts','ContactsController');
